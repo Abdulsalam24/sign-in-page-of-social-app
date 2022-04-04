@@ -1,0 +1,399 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+p {
+  line-height: 1.5;
+}
+
+img {
+  width: 100%;
+}
+
+a, ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: unset;
+  text-decoration: none;
+}
+
+.input {
+  outline: none;
+  width: 100%;
+  padding: 10px 15px 10px 20px;
+  margin: 10px 0;
+  font-size: 0.9rem;
+  border: 1px solid #e5e5e5;
+  height: 40px;
+  color: #b2b2b2;
+}
+.input::-moz-placeholder {
+  color: #b2b2b2;
+  font-size: 14px;
+}
+.input:-ms-input-placeholder {
+  color: #b2b2b2;
+  font-size: 14px;
+}
+.input::placeholder {
+  color: #b2b2b2;
+  font-size: 14px;
+}
+
+.check-item {
+  display: flex;
+  align-items: baseline;
+  margin: 10px 0;
+}
+.check-item .checkbox {
+  position: relative;
+  margin-right: 0.6rem;
+  border-radius: 100px;
+  border: 1px solid #e7e7e7;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+.check-item .checkbox-empty {
+  position: relative;
+  cursor: pointer;
+  margin-right: 10px;
+  border-radius: 100px;
+  border: 1px solid #e7e7e7;
+  width: 15px;
+  height: 15px;
+}
+.check-item .checkbox::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 100px;
+  color: #ffffff;
+  background-color: #e44d3a;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+button {
+  text-transform: capitalize;
+  background-color: #e5e5e5;
+  padding: 13px 20px;
+  border: none;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.center {
+  max-width: 700px;
+  margin: auto;
+}
+
+main {
+  line-height: 1.5;
+  background-color: #e75348;
+  padding: 70px 10px;
+}
+main .content {
+  border-radius: 6px;
+  background-color: #ffffff;
+  padding: 20px 30px;
+  width: 98%;
+  position: relative;
+}
+main .content::before {
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+  top: -16px;
+  left: 40px;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+}
+main .content::after {
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+  top: -37px;
+  left: 23px;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+}
+main .content .down {
+  width: 100%;
+  position: relative;
+}
+main .content .down::before {
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  bottom: -30px;
+  right: 70px;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+}
+main .content .down::after {
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+  bottom: -60px;
+  right: 55px;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+}
+main .content .content-left .logo {
+  width: 100%;
+  max-width: 200px;
+  margin: 20px 0;
+}
+main .content .content-left .content-text {
+  margin: 20px 0;
+}
+main .content .content-left .content-img img {
+  display: none;
+}
+main .content .content-right .sign-btn {
+  display: flex;
+  align-items: center;
+}
+main .content .content-right .sign-btn button {
+  padding: 7px 10px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  color: black;
+}
+main .content .content-right .sign-btn .active {
+  background-color: #e44d3a;
+  color: #fff;
+}
+main .content .content-right .sign-btn .active:hover {
+  background-color: #972e20;
+}
+main .content .content-right .switch .sign-in {
+  padding: 20px 0;
+}
+main .content .content-right .switch .sign-in h2 {
+  margin: 20px 0;
+  font-size: 1.5em;
+  position: relative;
+  display: inline-block;
+}
+main .content .content-right .switch .sign-in h2::before {
+  content: "";
+  width: 40px;
+  height: 2px;
+  color: #ffffff;
+  background-color: #e44d3a;
+  position: absolute;
+  top: 35px;
+  left: 10%;
+  transform: translateX(-10%) translateY(-10%);
+}
+main .content .content-right .switch .sign-in .check {
+  margin: 7px 0;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 500px) {
+  main .content .content-right .switch .sign-in .check {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+main .content .content-right .switch .sign-in .check .check-item {
+  display: flex;
+  align-items: center;
+}
+main .content .content-right .switch .sign-in .sign-in-btn button {
+  background-color: #e44d3a;
+  margin: 20px 0;
+}
+main .content .content-right .switch .sign-in .sign-in-btn button:hover {
+  background-color: #972e20;
+}
+main .content .content-right .switch .sign-in .social .flex {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  gap: 10px;
+  margin: 20px 0;
+}
+main .content .content-right .switch .sign-in .social button:nth-child(1) {
+  background-color: #3b5998;
+}
+main .content .content-right .switch .sign-in .social button:nth-child(1):hover {
+  background-color: #1d2e53;
+}
+main .content .content-right .switch .sign-in .social button:nth-child(2) {
+  background-color: #4099ff;
+}
+main .content .content-right .switch .sign-in .social button:nth-child(2):hover {
+  background-color: #86beff;
+}
+@media screen and (min-width: 500px) {
+  main .content .content-right .switch .sign-in .social {
+    margin: 10px 0;
+  }
+  main .content .content-right .switch .sign-in .social p {
+    text-align: center;
+  }
+  main .content .content-right .switch .sign-in .social .flex {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+}
+main .content .content-right .switch .sign-up .sign-up-toggle {
+  width: 100%;
+  border: 1px solid #e5e5e5;
+  text-align: center;
+  padding: 15px 0;
+  margin: 20px 0;
+}
+main .content .content-right .switch .sign-up .sign-up-toggle p {
+  font-size: 1.1em;
+}
+main .content .content-right .switch .sign-up .sign-up-toggle .user_company-btn {
+  margin: 10px 0 0 0;
+}
+main .content .content-right .switch .sign-up .sign-up-toggle .user_company-btn button {
+  border-radius: 4px;
+  background-color: #e5e5e5;
+  color: black;
+}
+main .content .content-right .switch .sign-up .sign-up-toggle .user_company-btn .active {
+  background-color: #e44d3a;
+  color: #fff;
+}
+main .content .content-right .switch .sign-up .sign-up-toggle .user_company-btn .active:hover {
+  background-color: #972e20;
+}
+main .content .content-right .switch .sign-up .submit-btn {
+  margin: 20px 0;
+}
+main .content .content-right .switch .sign-up .submit-btn button {
+  background-color: #e44d3a;
+  font-size: 16px;
+  padding: 15px 20px;
+  border: 0;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #ffffff;
+}
+main .content .content-right .switch .sign-up .submit-btn button:hover {
+  background-color: #972e20;
+}
+main .content .content-right .switch .sign-up .sign-up-inputs {
+  transition: 2s;
+}
+main .footer {
+  width: 90%;
+  margin: auto;
+  font-size: 1em;
+  font-weight: 400;
+}
+main .footer .pages ul {
+  margin: 80px 0 30px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+main .footer .pages ul li {
+  color: #ffffff;
+  position: relative;
+  margin: 0 0.5rem;
+}
+main .footer .pages ul li::after {
+  position: absolute;
+  right: -10px;
+  content: "|";
+}
+main .footer .pages .copyright p {
+  text-align: center;
+  color: white;
+}
+
+.copyright img {
+  display: none;
+}
+
+@media screen and (min-width: 1000px) {
+  .center {
+    max-width: 880px;
+  }
+
+  main {
+    padding: 100px 10px 20px;
+  }
+  main .content {
+    display: flex;
+    padding: 0;
+    gap: 10px;
+  }
+  main .content .content-left {
+    width: 50%;
+    padding: 60px 30px 0 50px;
+  }
+  main .content .content-left .content-img img {
+    display: unset;
+    width: 100%;
+    margin: 60px 0 0 0;
+  }
+  main .content .content-right {
+    width: 50%;
+    border-left: 2px solid #e4e1e1;
+    padding: 30px 0 0 0;
+  }
+  main .content .content-right .sign-btn {
+    justify-content: flex-end;
+    margin-right: 50px;
+  }
+  main .content .content-right .switch {
+    padding: 40px 60px 40px;
+  }
+  main .content .content-right .switch .sign-in .social .flex {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  main .content .down::before {
+    content: "";
+    bottom: -15px;
+  }
+  main .content .down::after {
+    bottom: -40px;
+  }
+  main .footer {
+    max-width: 1200px;
+  }
+  main .footer .pages {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  main .footer .pages ul {
+    gap: 2px;
+  }
+  main .footer .pages .copyright {
+    margin-bottom: 33px;
+  }
+}/*# sourceMappingURL=sign.css.map */
